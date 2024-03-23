@@ -1,22 +1,11 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-// import { useState } from "react"
+import {Navigate} from "react-router-dom";
 
 export default function ProtectedPage() {
-   // const [data, setData] = useState(null);
-
-   // useEffect(() => {
-   //    const token = localStorage.getItem("token");
-   //    axios.get("/protected", {
-   //       headers: {
-   //          Authorization: `Bearer ${token}`
-   //       }
-   //    }).then(res => {
-   //       setData(res.data);
-   //    }).catch(err => {
-   //       console.log(err);
-   //    })
-   // }, [])
-
+   const token = localStorage.getItem("token");
+   if(!token) {
+      return <Navigate to={"/signup"} />;
+   }
    return <div className="bg-zinc-800 h-screen">
       <div className="bg-zinc-950 p-2 flex justify-between items-center">
          <h1 className="ml-20 text-slate-200  font-sans">protectedPage</h1>
