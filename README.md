@@ -2,7 +2,7 @@
 ---
 
 <video width="100%" controls>
-  <source src="./multi-tab_demo.mp4" type="video/mp4">
+  <source src="https://github.com/user-attachments/assets/1f78c0ef-aca4-4524-9253-a0bd41b21645">
   Your browser does not support the video tag.
 </video>
 
